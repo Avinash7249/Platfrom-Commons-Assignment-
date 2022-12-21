@@ -159,10 +159,10 @@ spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
 ```
 
 ## Swagger UI
-## Course Controller
-![c](https://user-images.githubusercontent.com/101566533/208807704-2929e623-2101-4adc-9a2e-a768dbeb5436.JPG)
-
-
 ## Student Controller
 ![s1](https://user-images.githubusercontent.com/101566533/208807712-1b99cb44-9f8b-492c-8fc1-d422bf17783d.JPG)
+
+
+## Course Controller
+![c](https://user-images.githubusercontent.com/101566533/208807704-2929e623-2101-4adc-9a2e-a768dbeb5436.JPG)
 
