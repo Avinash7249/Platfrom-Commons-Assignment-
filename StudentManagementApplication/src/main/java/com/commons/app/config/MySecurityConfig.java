@@ -44,15 +44,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder(10) ;
 	}
 	
-//	@Bean
-//	public Docket api() {
-//		
-//		return new Docket(DocumentationType.SWAGGER_2)
-//				.select()
-//				.apis(RequestHandlerSelectors.any())
-//				.paths(PathSelectors.any())
-//				.build();
-//	}
+
 	
 	
 }
