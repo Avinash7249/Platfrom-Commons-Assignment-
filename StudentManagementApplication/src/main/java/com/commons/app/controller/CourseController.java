@@ -33,7 +33,7 @@ public class CourseController {
 	@Autowired(required = false)
 	private CourseService courseService;
 	
-	//@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/courses/")
 	public ResponseEntity<CourseDTO> addCourseHandler(@Valid @RequestBody CourseDTO courseDTO) throws CourseException {
 		
@@ -42,7 +42,7 @@ public class CourseController {
 		return new ResponseEntity<CourseDTO>(savedCourse,HttpStatus.CREATED) ;
 	}
 	 
-	//@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/courses/assgign")
 	public ResponseEntity<StudentCourse> assginStudentToCourseHandler(@RequestParam("studentId") Integer sttudentId,
 																	@RequestParam("courseId") Integer courseId) throws CourseException, StudentException {
@@ -52,7 +52,7 @@ public class CourseController {
 		return new ResponseEntity<StudentCourse>(assignedCourse,HttpStatus.OK) ;
 	}
 	
-	//@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@GetMapping("/courses/")
 	public ResponseEntity<CourseStudents> getStudentsFromCorseHandler(@RequestParam Integer courseId) throws CourseException {
 		
@@ -61,7 +61,7 @@ public class CourseController {
 		return new ResponseEntity<CourseStudents>(courseStudents,HttpStatus.OK) ;
 	}
 	
-	//@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping("/courses/")
 	public ResponseEntity<CourseDTO> removeCourseHandler(@RequestParam Integer courseId) throws CourseException {
 		

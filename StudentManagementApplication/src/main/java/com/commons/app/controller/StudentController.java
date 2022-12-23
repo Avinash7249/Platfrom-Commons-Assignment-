@@ -32,7 +32,7 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 
-	//@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/students/")
 	public ResponseEntity<StudentDTO> registerStudentHandler(@Valid @RequestBody StudentDTO studentDTO)
 			throws StudentException, UserException {
@@ -42,7 +42,7 @@ public class StudentController {
 		return new ResponseEntity<StudentDTO>(registredStudent, HttpStatus.CREATED);
 	}
 
-	//@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN')")
 	@GetMapping("/students/")
 	public ResponseEntity<List<StudentDTO>> getStudentsByNameHandler(@RequestParam("name") String name)
 			throws StudentException {
