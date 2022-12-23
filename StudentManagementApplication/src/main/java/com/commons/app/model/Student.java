@@ -53,4 +53,3 @@ public class Student {
 	
 }
 
-//	private String unique_student_code;
